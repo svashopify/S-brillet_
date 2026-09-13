@@ -3258,11 +3258,11 @@
               assign tag_name = tag_content | split: '_' | last
               assign color_scheme_class = 'm-gradient m-color-'
               case type
-                when 'sale':
+                when 'sale'
                   assign color_scheme_class = color_scheme_class | append: settings.sale_badge_color_scheme
-                when 'new':
+                when 'new'
                   assign color_scheme_class = color_scheme_class | append: settings.new_badge_color_scheme
-                when 'hot':
+                when 'hot'
                   assign color_scheme_class = color_scheme_class | append: settings.hot_badge_color_scheme
               endcase
             -%}
@@ -3772,3 +3772,19 @@
 
 </div>
 {%- if column_wrapper -%}</div>{%- endif -%}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "                when 'sale':"
+  to: "                when 'sale'"
+  position: 117363..117390
+- from: "                when 'new':"
+  to: "                when 'new'"
+  position: 117499..117525
+- from: "                when 'hot':"
+  to: "                when 'hot'"
+  position: 117633..117659
+{% endcomment %}
